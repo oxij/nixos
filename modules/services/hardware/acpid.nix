@@ -12,7 +12,7 @@ let
         # multiple events in one config file...)
         let f = event:
           ''
-            fn=$out/${event.name}.conf
+            fn=$out/${event.name}
             echo "event=${event.event}" > $fn
             echo "action=${pkgs.writeScript "${event.name}.sh" event.action}" >> $fn
           '';
